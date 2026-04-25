@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | KeyFlow Dashboard</title>
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="dark-theme">
+    <div class="admin-layout">
+        <aside class="sidebar glass-panel">
+            <div class="sidebar-header">
+                <i class="ph ph-piano-keys logo-icon"></i>
+                <h2>KeyFlow Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admin-dashboard.html" class="nav-item active"><i class="ph ph-squares-four"></i> Dashboard</a>
+                <a href="index.html" class="nav-item"><i class="ph ph-arrow-left"></i> Back to App</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="top-nav glass-panel">
+                <div class="search-bar">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="nav-actions">
+                    <button class="icon-btn" id="themeToggle"><i class="ph ph-moon"></i> Toggle Theme</button>
+                </div>
+            </header>
+            <div class="dashboard-content">
+                <div class="page-header">
+                    <h1>Overview</h1>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card glass-panel">
+                        <div class="metric-header"><span>Total Users</span></div>
+                        <h3 class="metric-value">124,592</h3>
+                    </div>
+                    <div class="metric-card glass-panel">
+                        <div class="metric-header"><span>Est. Revenue</span></div>
+                        <h3 class="metric-value">$4,290.50</h3>
+                    </div>
+                </div>
+                <div class="charts-grid">
+                    <div class="chart-card glass-panel">
+                        <h3>Weekly Traffic</h3>
+                        <canvas id="trafficChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>
